@@ -34,6 +34,7 @@
         <ul id="todoList" class="list-group">
             <!-- Tasks will be appended here dynamically -->
         </ul>
+        <button class="btn btn-danger mt-3 w-100" onclick="deleteAllTasks()">Delete All</button>
     </div>
 
     <script>
@@ -83,6 +84,12 @@
         // Delete task
         function deleteTask(index) {
             tasks.splice(index, 1);
+            renderTasks();
+        }
+
+        // Delete all tasks
+        function deleteAllTasks() {
+            tasks = [];
             renderTasks();
         }
 
